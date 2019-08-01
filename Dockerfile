@@ -14,6 +14,6 @@ WORKDIR firing-range/
 
 RUN cp ../../jetty94/jetty-home/lib/servlet-api-3.1.jar ../../lib/shared/
 
-EXPOSE 8080 5050
+EXPOSE 80 5050
 
-CMD ["ant","-Daddress=0.0.0.0","runserver"]
+CMD ["ant","-Daddress=0.0.0.0","-Dhttp.port=80","runserver"]
